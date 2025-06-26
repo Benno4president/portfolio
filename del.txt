@@ -1,0 +1,11 @@
+"Bachelors-Fall-Detection-ML.md",
+"Masters-30-ETCS-Drone-Interaction.md",
+"Trading-Bots.md",
+"Dashboard.md",
+"News-Fetcher-with-Sentiment.md",
+"Documentation-Network-Mapping.md",
+"Permaculture-Website.md",
+"Hoejskole-Schedule-Builder.md",
+"Personal-Website.md",
+"HTTP-Server-Quick-Filedump.md",
+"Satellite-Image-Analysis.md"
