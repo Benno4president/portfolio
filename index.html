@@ -48,9 +48,55 @@
                     <!--MAIN!!!-->
                     <td width="auto" style="padding: 3px">
                         <!--ALL MY FUCKING BUTTONS-->
-                        <marquee scrollamount="10" onmouseout="start()" onmouseover="stop()">
-                            <img src="static/choochoo.gif" height="31px" />
-                            <a><img src="static/badges/werewolf.gif" /></a>
+                        <marquee class="marquee-inf">
+                            <a><img
+                                    src="https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/Firefox-FF7139?logo=Firefox&logoColor=white" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/Tor-7D4698?logo=Tor-Browser&logoColor=white" /></a>
+                            <a><img src="https://img.shields.io/badge/Vim-%2311AB00.svg?logo=vim&logoColor=white" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/VSCodium-2F80ED?logo=vscodium&logoColor=fff" /></a>
+                            <a><img src="https://img.shields.io/badge/Miro-050038?logo=miro&logoColor=fff" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/Postgres-%23316192.svg?logo=postgresql&logoColor=white" /></a>
+                            <a><img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=fff" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/-scikit--learn-%23F7931E?logo=scikit-learn&logoColor=white" /></a>
+                            <a><img src="https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white" /></a>
+                            <a><img src="https://img.shields.io/badge/Krita-203759?logo=krita&logoColor=EEF37B" /></a>
+                            <a><img src="https://img.shields.io/badge/Kaggle-20BEFF?logo=kaggle&logoColor=fff" /></a>
+                            <a><img src="https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff" /></a>
+                            <a><img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff" /></a>
+                            <a><img src="https://img.shields.io/badge/Flask-000?logo=flask&logoColor=fff" /></a>
+                            <a><img src="https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/Selenium-43B02A?logo=selenium&logoColor=fff" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/TensorFlow-ff8f00?logo=tensorflow&logoColor=white" /></a>
+                            <a><img src="https://img.shields.io/badge/Pop!__OS-48B9C7?logo=popos&logoColor=fff" /></a>
+                            <a><img src="https://img.shields.io/badge/Debian-A81D33?logo=debian&logoColor=fff" /></a>
+                            <a><img src="https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=fff" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white" /></a>
+                            <a><img
+                                    src="https://custom-icon-badges.demolab.com/badge/C%23-%23239120.svg?logo=cshrp&logoColor=white" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white" /></a>
+                            <a><img src="https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000" /></a>
+                            <a><img src="https://img.shields.io/badge/JSON-000?logo=json&logoColor=fff" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white" /></a>
+                            <a><img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff" /></a>
+                            <a><img
+                                    src="https://img.shields.io/badge/DuckDuckGo-FF5722?logo=duckduckgo&logoColor=white" /></a>
+                            <a><img src="https://img.shields.io/badge/Zsh-F15A24?logo=zsh&logoColor=fff" /></a>
+                            <a><img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff" /></a>
                         </marquee>
 
                         <!-- center content -->
@@ -209,11 +255,16 @@
 </body>
 
 <script src="baked_items.js"></script>
-<script>
+<script type="module">
     addEventListener("DOMContentLoaded", (event) => {
         //workArray
-
-
+        fetch("https://api.github.com/repos/Benno4president/portfolio/contents/items")
+            .then((res) => res.json())
+            .then((data) => {
+                data.forEach((file) => {
+                    console.log(file.name, file.download_url);
+                });
+            });
     });
 
     /* search function using hashchange events */
@@ -256,6 +307,25 @@
         font-family: "MS gothic";
         image-rendering: pixelated;
         font-size: 13px;
+    }
+
+
+    .marquee-inf {
+        animation: marquee 10s linear 7.5s infinite
+    }
+
+    @keyframes marquee {
+        0% {
+            left: 100%;
+        }
+
+        50% {
+            left: -100%;
+        }
+
+        100% {
+            left: -100%
+        }
     }
 
     marquee img:hover {
