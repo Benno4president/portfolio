@@ -26,7 +26,9 @@
               height: 130px;
               background-image: url(static/banner1-sized3.png);
               background-size: cover;
-            " title="YEYEA!"></td>
+            " title="YEYEA!">
+                    <a href="" id="overlay"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="3">
@@ -306,8 +308,8 @@
         background-color: var(--style_3);
         margin-bottom: 1%;
       ">
-            Kristian Juel | 2025
-            <a href="https://c.tenor.com/6Hixx4SFAeQAAAAd/tenor.gif">Weee</a>
+            © Kristian Juel 2025 | MIT
+
         </div>
     </center>
 </body>
@@ -330,6 +332,7 @@
             }
         }
     }
+
 
     addEventListener("DOMContentLoaded", (event) => {
         //workArray
@@ -400,6 +403,8 @@
         margin-bottom: -16px;
     }
 
+
+
     .marquee__content {
         flex-shrink: 0;
         display: flex;
@@ -452,6 +457,18 @@
         font-weight: bold;
         text-shadow: 1px 1px 1px grey;
         color: var(--style_2);
+    }
+
+    /* not sure this is the greatest idea, but it works perfectly*/
+    #overlay {
+        position: fixed;
+        display: block;
+        width: 900px;
+        height: 130px;
+        /*block display w/ full opacity */
+        background-color: rgba(0, 0, 0, 0.0);
+        z-index: 2;
+        cursor: pointer;
     }
 
     a {
