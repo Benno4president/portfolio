@@ -1,7 +1,10 @@
 function importAndAppendItems() {
-  
-    fetch("https://raw.githubusercontent.com/Benno4president/portfolio/refs/heads/main/items/test.html")
-        .then((res) => {res.text().then((text) => {console.log(text)})})
+  // https://raw.githubusercontent.com/Benno4president/portfolio/refs/heads/main/items/test.html
+    fetch("portfolio_items.html")
+        .then((res) => {
+            res.text().then((text) => {
+                document.getElementById("itemsGoHere").innerHTML += text
+            })})
     return
     fetch(
     "https://api.github.com/repos/Benno4president/portfolio/contents/items/test.html"
