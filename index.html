@@ -167,7 +167,7 @@
                     </td>
 
                     <!--MAIN!!!-->
-                    <td width="auto" style="padding: 3px">
+                    <td id="itemsGoHere" width="auto" style="padding: 3px">
                         <!-- center content -->
                         <!-- left side content -->
                         <div class="bocks" style="
@@ -205,7 +205,7 @@
                         </div>
 
                         <!-- ---------------------------------- -->
-                        <div class="bocks portfolio_item" id="1" style="
+                        <div class="bocks portfolio_item" id="1 3" style="
                 width: 98%;
                 height: auto;
                 float: left;
@@ -226,7 +226,7 @@
                             </p>
                         </div>
 
-                        <div class="bocks portfolio_item" id="2" style="
+                        <div class="bocks portfolio_item" id="2 3" style="
                 width: 98%;
                 height: auto;
                 float: left;
@@ -246,7 +246,7 @@
                                 chaos not just bearable, but beautiful.
                             </p>
                         </div>
-                        <div class="bocks portfolio_item" id="2" style="
+                        <div class="bocks portfolio_item" id="2 3" style="
                 width: 98%;
                 height: auto;
                 float: left;
@@ -306,7 +306,7 @@
     </center>
 </body>
 
-<script src="baked_items.js"></script>
+<script src="import_items.js"></script>
 <script type="module">
     function filterPortfolioItems(event) {
         const url = event.newURL || window.location.href;
@@ -327,17 +327,7 @@
 
 
     addEventListener("DOMContentLoaded", (event) => {
-        //workArray
-        fetch(
-            "https://api.github.com/repos/Benno4president/portfolio/contents/items"
-        )
-            .then((res) => res.json())
-            .then((data) => {
-                data.forEach((file) => {
-                    console.log(file.name, file.download_url);
-                });
-            });
-
+        importAndAppendItems()
         // check starting hashevent
         filterPortfolioItems(event);
 
