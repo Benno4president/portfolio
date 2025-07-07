@@ -8,7 +8,6 @@
     <meta name="title" content="Portfolio of a software engineer." />
     <meta name="description" content="" />
     <link rel="stylesheet" src="static/css/css_reset.css" />
-
 </head>
 
 <body>
@@ -164,6 +163,10 @@
                         <a href="#HTML/CSS/JS">HTML/CSS/JS</a><br />
                         <br />
                         <a href="#C-Skarp">C Skarp</a><br />
+                        <br />
+                        <a href="#Script">Script</a><br />
+                        <br />
+                        <a href="#Project">Project</a><br />
                     </td>
 
                     <!--MAIN!!!-->
@@ -178,19 +181,18 @@
                 padding-left: 5px;
               ">
                             <p>
-                                I am a detail-loving and slightly nerdy software engineer with a degree from Aalborg
-                                University. While studying, I started working at XCI A/S, where I set up
-                                and improved automated systems. My skills include building systems, working with data,
-                                teaching machines to learn stuff, automating whatever I can, and doing a bit of
-                                financial trading when I'm feeling adventurous.
+                                I am a detail-loving and slightly nerdy software engineer with a
+                                degree from Aalborg University. While studying, I started
+                                working at XCI A/S, where I set up and improved automated
+                                systems. My skills include building systems, working with data,
+                                teaching machines to learn stuff, automating whatever I can, and
+                                doing a bit of financial trading when I'm feeling adventurous.
                             </p>
                             <p>Contact: juel.work@gmail.com</p>
                         </div>
 
                         <!-- ez way to get right structure.. might have consequences-->
-                        <div style="height: 20px;">
-
-                        </div>
+                        <div style="height: 20px"></div>
 
                         <!-- right side -->
                         <div class="" style="
@@ -283,18 +285,16 @@
         margin-bottom: 1%;
       ">
             © Kristian Juel 2025
-
         </div>
     </center>
 </body>
 
-<script src="import_items.js"></script>
 <script type="module">
     function filterPortfolioItems(event) {
         const url = event.newURL || window.location.href;
         if (!url.includes("#")) {
             return;
-        };
+        }
         const search = url.split("#")[1];
         const items = document.getElementsByClassName("portfolio_item");
         for (let i = 0; i < items.length; i++) {
@@ -307,9 +307,13 @@
         }
     }
 
-
     addEventListener("DOMContentLoaded", (event) => {
-        importAndAppendItems()
+        // ez html import to seperate the item html
+        fetch("portfolio_items.html").then((res) => {
+            res.text().then((text) => {
+                document.getElementById("itemsGoHere").innerHTML += text;
+            });
+        });
         // check starting hashevent
         filterPortfolioItems(event);
 
@@ -319,7 +323,6 @@
         marq_ul_clone.setAttribute("aria", "hidden");
         marq.appendChild(marq_ul_clone);
     });
-
 
     /* search function using hashchange events */
     addEventListener("hashchange", (event) => {
@@ -367,8 +370,6 @@
         margin-bottom: -16px;
     }
 
-
-
     .marquee__content {
         flex-shrink: 0;
         display: flex;
@@ -394,7 +395,6 @@
     /*MAIN CONTENT*/
     .mainwrapper {
         width: 800px;
-        
     }
 
     tr {
@@ -442,7 +442,7 @@
         width: 900px;
         height: 130px;
         /*block display w/ full opacity */
-        background-color: rgba(0, 0, 0, 0.0);
+        background-color: rgba(0, 0, 0, 0);
         z-index: 2;
         cursor: pointer;
     }
