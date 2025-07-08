@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 
 <head>
-    <title>~wee</title>
+    <title> ~Portfolio~ [Kristian Juel]</title>
     <link rel="icon" href="static/favicon.png" />
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <meta charset="UTF-8" />
     <meta name="title" content="Portfolio of a software engineer." />
-    <meta name="description" content="" />
+    <meta name="description"
+        content="Hello, I'm Kristian, a software engineer with a degree from Aalborg University. I specialize in building systems, data engineering, machine learning, automation, and financial trading. Explore my portfolio and discover how I create smart, efficient solutions." />
     <link rel="stylesheet" src="static/css/css_reset.css" />
 </head>
 
@@ -28,7 +29,7 @@
               background-size: cover;
             " title="YEYEA!">
                         <!-- for removing hashevent and redirect home -->
-                        <a href="" id="overlay"></a>
+                        <a href="" class="overlay" style="width: 900px;height: 130px;"></a>
                     </td>
                 </tr>
                 <tr>
@@ -158,16 +159,15 @@
                     <!--SIDEBAR 1-->
                     <td width="15%" style="background-color: var(--style_5); padding: 3px">
                         <div class="card">Languages</div>
-                        <a href="#Python">Python</a><br />
                         <br />
-                        <a href="#HTML/CSS/JS">HTML/CSS/JS</a><br />
+                        <a class="hasheventbtn" href="#Python">Python</a><br />
                         <br />
-                        <a href="#C-Skarp">C Skarp</a><br />
-                        
-                        <div class="card">Type</div>
-                        <a href="#Script">Script</a><br />
+                        <a class="hasheventbtn" href="#HTML/CSS/JS">HTML/CSS/JS</a><br />
                         <br />
-                        <a href="#Project">Project</a><br />
+                        <a class="hasheventbtn" href="#C-Skarp">C Skarp</a><br />
+                        <br />
+
+
                     </td>
 
                     <!--MAIN!!!-->
@@ -182,7 +182,7 @@
                 padding-left: 5px;
               ">
                             <p>
-                                I am a detail-loving and slightly nerdy software engineer with a
+                                Hello, I'm Kristian and I'm a slightly nerdy software engineer with a
                                 degree from Aalborg University. While studying, I started
                                 working at XCI A/S, where I set up and improved automated
                                 systems. My skills include building systems, working with data,
@@ -204,7 +204,9 @@
                 margin-right: 25px;
                 padding-left: 5px;
               ">
-                            <p><img src="static/pp.jpg" width="100%" align="left" /></p>
+                            <p><img src="static/pp_small.jpg" width="100%" align="left" /></p>
+                            <p><img class="overlay" id="Sunglasses" style="width: 200px;" src="static/pp_sunglasses.png"
+                                    width="100%" align="left" onclick="toggleSunglasses()" /></p>
                         </div>
 
                         <!-- ---------------------------------- -->
@@ -213,7 +215,11 @@
 
                     <!--SIDEBAR TWO-->
                     <td width="15%" style="background-color: var(--style_5); padding: 3px">
-                        <div class="card">left</div>
+                        <div class="card">Type</div>
+                        <br />
+                        <a class="hasheventbtn" href="#Script">Script</a><br />
+                        <br />
+                        <a class="hasheventbtn" href="#Project">Project</a><br />
                     </td>
                 </tr>
             </tbody>
@@ -233,6 +239,15 @@
 </body>
 
 <script type="module">
+    function toggleSunglasses() {
+        const sunglassImg = document.getElementById("Sunglasses");
+        const isVisible = sunglassImg.style.opacity === "1";
+        sunglassImg.style.opacity = (isVisible ? 0.0 : 1.0);
+    }
+    // some edge case requires this... not feeling like debugging it.
+    window.toggleSunglasses = toggleSunglasses
+
+
     function filterPortfolioItems(event) {
         const url = event.newURL || window.location.href;
         if (!url.includes("#")) {
@@ -371,35 +386,57 @@
         border: 1px inset var(--style_5);
         /*background-image: url(/static/idk.png);*/
         background-color: var(--style_3);
+        color: var(--style_2);
         margin: 5px auto;
         background-size: 30%;
         font-weight: bold;
         text-shadow: 1px 1px 1px grey;
-        color: var(--style_2);
+        font-size: larger;
+        letter-spacing: 1px;
     }
 
     /* not sure this is the greatest idea, but it works perfectly*/
-    #overlay {
-        position: fixed;
+    .overlay {
+        position: absolute;
         display: block;
-        width: 900px;
-        height: 130px;
+        opacity: 0%;
         /*block display w/ full opacity */
         background-color: rgba(0, 0, 0, 0);
         z-index: 2;
         cursor: pointer;
     }
 
-    a {
-        color: var(--style_4) !important;
-    }
-
     a:hover {
-        color: var(--style_3) !important;
+        color: var(--style_2) !important;
         font-style: italic;
     }
 
     a:visited {
         text-decoration: none;
+    }
+
+    a {
+        color: var(--style_2) !important;
+        background: #c42fa9;
+        background: -webkit-gradient(linear, left top, left bottom, from(#4f98dc), to(#c42fa9));
+        background: -webkit-linear-gradient(top, #4f98dc, #c42fa9);
+        background: -moz-linear-gradient(top, #4f98dc, #c42fa9);
+        background: -ms-linear-gradient(top, #4f98dc, #c42fa9);
+        background: -o-linear-gradient(top, #4f98dc, #c42fa9);
+        padding: 2px 8px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        border-radius: 40px;
+        text-decoration: none;
+    }
+
+    a.overlay {
+        color: var(--style_4) !important;
+        text-decoration: none;
+        background: #00000000;
+        padding: 0px 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
     }
 </style>
