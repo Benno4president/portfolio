@@ -8,6 +8,8 @@ Script
 Project
 Miro
 
+MachineLearning
+
 Pandas
 Beautifulsoup4
 Flask
@@ -18,7 +20,7 @@ Selenium
 <div class="bocks portfolio_item" id="Python Project Pandas Beautifulsoup4">
   <h2>Generating network visualizations from user documentation</h2>
   <p>
-    <img src="static/item_imgs/doc_mapper.png" width="46%" align="right" />
+    <img src="static/item_imgs/doc_mapper3.png" width="46%" align="right" />
   </p>
   <p>
     Documentation scraper and network visualization tool developed for Playday
@@ -84,9 +86,12 @@ Selenium
   </p>
 </div>
 
-<div class="bocks portfolio_item" id="Project Python Pandas Beautifulsoup4 Selenium">
+<div
+  class="bocks portfolio_item"
+  id="Project Python Pandas Beautifulsoup4 Selenium"
+>
   <h2>Bulk news article scraper w/ sentiment scoring</h2>
-  
+
   <p>
     This is a Python toolkit I built for collecting and analyzing news articles.
     It uses Selenium, BeautifulSoup, and Pandas to scrape content and stores the
@@ -97,11 +102,34 @@ Selenium
     from the collected data.
   </p>
   <p>
-    <img src="static/item_imgs/news-scraper.jpg" width="98%" align="center"/>
+    <img src="static/item_imgs/news-scraper.jpg" width="98%" align="center" />
   </p>
   <p>
     <a href="https://github.com/Benno4president/news_fetcher">Github repo ➚</a>
     | Date 2022/02/01
+  </p>
+</div>
+
+<div class="bocks portfolio_item" id="Script Python MachineLearning">
+  <h2>Satellite image splitter w/ detection and world file support</h2>
+  <p>
+    <img src="static/item_imgs/area-analyser.jpg" width="45%" align="right" />
+  </p>
+  <p>
+    This Python script processes .png images by splitting them into smaller
+    tiles of a specified size. For example, a 10.000×10.000 px satellite image
+    with a target tile size of 250×250 px produces 1.600 smaller images. Beyond
+    splitting, the script analyzes each tile to calculate the percentage of
+    specific colors (by default, detecting forest and water bodies). If
+    accompanying .pgw files are present (with the same base filename as the
+    .png), the script reads them as top-left corner coordinates. It then
+    calculates the geolocation of each tile and stores this alongside the color
+    data. The goal is to process and enrich data for use in machine learning
+    workflows.
+  </p>
+  <p>
+    <a href="https://github.com/Benno4president/Area-Analyser">Github repo ➚</a>
+    | Date 2021/11/14
   </p>
 </div>
 
