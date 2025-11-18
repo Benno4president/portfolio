@@ -17,29 +17,48 @@ Selenium
 
 
 -->
-<div class="bocks portfolio_item" id="Python Project Pandas Beautifulsoup4">
-  <h2>Generating network visualizations from user documentation</h2>
+<div class="bocks portfolio_item" id="Python Script">
+  <h2>Wiz lightbulb console app</h2>
   <p>
-    <img src="static/item_imgs/doc_mapper3.png" width="46%" align="right" />
+    <img src="static/item_imgs/wiz_light.gif" width="30%" align="right" />
   </p>
   <p>
-    Documentation scraper and network visualization tool developed for Playday
-    in Python. The application combines a webscraper and a GEXF network
-    generator to optimize user-facing documentation. The scraper uses
-    requests and BeautifulSoup with a breadth-first search to crawl all valid
-    links. The harvested data is processed into pandas DataFrames and converted
-    into .gexf files via NetworkX, enabling visualization in Gephi. Clustering
-    algorithms in Gephi assign colors to nodes, effectively isolating navigation
-    clusters and revealing user traversal paths through the documentation. This
-    approach provides clear, actionable insights for improving content structure.
+    I developed a script designed to discover and manage all Wiz lights connected to my Wi-Fi network. This
+    tool allows for seamless control of all of Wiz lights, even as their locations change and their IP
+    addresses fluctuate. One of the standout features of this script is its ability to cache registered IPs and
+    settings, which minimizes delays and enables near-instant control. This fast operation also lends itself well to
+    automation scenarios, making it particularly useful for coordinating lighting during events like a "Tour de
+    chambre." To ensure reliable performance, the script integrates the pywizlight library, which leverages the
+    necessary communication protocols.
   </p>
   <p>
-    <a href="https://github.com/Benno4president/documentation_mapper"
-      >Github repo ➚</a
-    >
-    | Date 2023/04/29
+    <a href="https://gist.github.com/Benno4president/94f34fae12bcc8a53d3aaf3d449a206e">Github gist ➚</a>
+    | Date 2025/11/18
   </p>
 </div>
+
+<div class="bocks portfolio_item" id="Python Project Pandas Beautifulsoup4 Selenium">
+  <h2>Timescaledb ready-to-go stack w/ metric collection</h2>
+  <p>
+    Database deployment solution utilizing TimescaleDB, pgAdmin, Telegraf, and Grafana, aimed at managing timeseries
+    data for various projects. This stack provides an efficient, scalable, and visually informative approach to
+    monitoring and analyzing real-time metrics. It uses TimescaleDB; A PostgreSQL extension tailored for
+    timeseries data, which supports complex queries and time-based analytic. pgAdmin; A web interface for managing
+    postgres, facilitating easier database administration and query
+    execution. Telegraf for a reliable metrics collector that gathers performance data in real-time for analysis, and
+    Grafana; A dashboard tool that transforms metrics into interactive visualizations. A Timescaledb sql script was
+    created for the news fetcher which leverages the advanced options available via Timescale. It can be found <a
+      href="https://github.com/Benno4president/news_fetcher/blob/main/db_timescaledb_sql/populate_tsdb.sql">here</a>.
+  </p>
+  <p>
+    <img src="static/item_imgs/timescale-rtg.jpg" width="98%" align="center" />
+  </p>
+  <p>
+    <a href="https://github.com/Benno4president/timescaledb-rtg">Github repo ➚</a>
+    | Date 2025/10/30
+  </p>
+</div>
+
 
 <div class="bocks portfolio_item" id="Python Script Flask">
   <h2>QoL fast file transfer HTTP server</h2>
@@ -58,10 +77,7 @@ Selenium
     events.
   </p>
   <p>
-    <a
-      href="https://gist.github.com/Benno4president/80731430bd5a9e92123706ebcb277ca4"
-      >Github gist ➚</a
-    >
+    <a href="https://gist.github.com/Benno4president/80731430bd5a9e92123706ebcb277ca4">Github gist ➚</a>
     | Date 2025/06/23
   </p>
 </div>
@@ -85,10 +101,57 @@ Selenium
   </p>
 </div>
 
-<div
-  class="bocks portfolio_item"
-  id="Project Python Pandas Beautifulsoup4 Selenium"
->
+<div class="bocks portfolio_item" id="Project Miro HTML/CSS/JS">
+  <h2>Master's Thesis: Drones for security and surveillance</h2>
+  <p>
+    <img src="static/item_imgs/masters.png" width="40%" align="right" />
+  </p>
+  <p>
+    I wrote my thesis at Aalborg University in Human-Computer Interaction,
+    supervised by Timothy Robert Merritt. Our project was part of HERD, which
+    looks at how drones and drone swarms can improve areas like agriculture,
+    public safety, and search and rescue. In the first semester, we worked with
+    Robotto, an AI and drone company, and Amagerværket, a biofuel power plant.
+    Together, we ran co-design sessions to figure out the best ways to show
+    biofuel data to users and explore how drones could help manage critical
+    infrastructure. Later, we focused on how drones can improve the security and
+    safety of critical infrastructure, especially as threats become more
+    advanced and traditional monitoring isn't enough. We researched what
+    operations staff need from drone systems and how interfaces should be
+    designed to support them. The project resulted in practical design
+    suggestions that can help both designers and researchers build better
+    drone-based security solutions.
+  </p>
+  <p>
+    <a href="https://github.com/Benno4president/masters-project">Github repo ➚</a>
+    | Date 2024/06/14
+  </p>
+</div>
+
+<div class="bocks portfolio_item" id="Python Project Pandas Beautifulsoup4">
+  <h2>Generating network visualizations from user documentation</h2>
+  <p>
+    <img src="static/item_imgs/doc_mapper3.png" width="46%" align="right" />
+  </p>
+  <p>
+    Documentation scraper and network visualization tool developed for Playday
+    in Python. The application combines a webscraper and a GEXF network
+    generator to optimize user-facing documentation. The scraper uses
+    requests and BeautifulSoup with a breadth-first search to crawl all valid
+    links. The harvested data is processed into pandas DataFrames and converted
+    into .gexf files via NetworkX, enabling visualization in Gephi. Clustering
+    algorithms in Gephi assign colors to nodes, effectively isolating navigation
+    clusters and revealing user traversal paths through the documentation. This
+    approach provides clear, actionable insights for improving content structure.
+  </p>
+  <p>
+    <a href="https://github.com/Benno4president/documentation_mapper">Github repo ➚</a>
+    | Date 2023/04/29
+  </p>
+</div>
+
+
+<div class="bocks portfolio_item" id="Project Python Pandas Beautifulsoup4 Selenium">
   <h2>Bulk news article scraper w/ sentiment scoring</h2>
 
   <p>
@@ -129,34 +192,5 @@ Selenium
   <p>
     <a href="https://github.com/Benno4president/Area-Analyser">Github repo ➚</a>
     | Date 2021/11/14
-  </p>
-</div>
-
-<div class="bocks portfolio_item" id="Project Miro HTML/CSS/JS">
-  <h2>Master's Thesis: Drones for security and surveillance</h2>
-  <p>
-    <img src="static/item_imgs/masters.png" width="40%" align="right" />
-  </p>
-  <p>
-    I wrote my thesis at Aalborg University in Human-Computer Interaction,
-    supervised by Timothy Robert Merritt. Our project was part of HERD, which
-    looks at how drones and drone swarms can improve areas like agriculture,
-    public safety, and search and rescue. In the first semester, we worked with
-    Robotto, an AI and drone company, and Amagerværket, a biofuel power plant.
-    Together, we ran co-design sessions to figure out the best ways to show
-    biofuel data to users and explore how drones could help manage critical
-    infrastructure. Later, we focused on how drones can improve the security and
-    safety of critical infrastructure, especially as threats become more
-    advanced and traditional monitoring isn't enough. We researched what
-    operations staff need from drone systems and how interfaces should be
-    designed to support them. The project resulted in practical design
-    suggestions that can help both designers and researchers build better
-    drone-based security solutions.
-  </p>
-  <p>
-    <a href="https://github.com/Benno4president/masters-project"
-      >Github repo ➚</a
-    >
-    | Date 2024/06/14
   </p>
 </div>
